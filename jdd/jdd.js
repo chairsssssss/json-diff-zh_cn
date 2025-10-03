@@ -14,7 +14,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * chinese translated version 
+ * Chinese translated version by chairsssssss
+ * 
  ******************************************************************************/
 'use strict';
 
@@ -857,7 +858,7 @@ var jdd = {
 
         report.replaceChildren();
 
-        report.insertAdjacentHTML('beforeend', '<button>Perform a new diff</button>');
+        report.insertAdjacentHTML('beforeend', '<button>进行新的比较</button>');
         // TODO: add a class/id name to button and use that to select and add event
         report.querySelector('button').addEventListener('click', function () {
             jdd.setupNewDiff();
@@ -881,15 +882,15 @@ var jdd = {
             }
         });
 
-        var title = '<div class="reportTitle">Found ' + jdd.diffs.length + ' difference';
+        var title = '<div class="reportTitle">找到了 ' + jdd.diffs.length + ' 处不同';
         if (jdd.diffs.length > 1) {
-            title += 's';
+            title += '';
         }
         title += '</div>';
 
         report.insertAdjacentHTML('afterbegin', title);
 
-        var filterBlock = '<span class="filterBlock">Show:';
+        var filterBlock = '<span class="filterBlock">展示：';
 
         /*
          * The missing checkbox
@@ -897,9 +898,9 @@ var jdd = {
         if (missingCount > 0) {
             var missing = '<label><input id="showMissing" type="checkbox" name="checkbox" value="value" checked="true">' + missingCount;
             if (missingCount === 1) {
-                missing += ' missing property';
+                missing += ' 个缺失的属性';
             } else {
-                missing += ' missing properties';
+                missing += ' 个缺失的属性';
             }
             filterBlock += missing + '</label>';
         }
@@ -908,9 +909,9 @@ var jdd = {
          * The types checkbox
          */
         if (typeCount > 0) {
-            var types = '<label><input id="showTypes" type="checkbox" name="checkbox" value="value" checked="true">' + typeCount + ' incorrect type';
+            var types = '<label><input id="showTypes" type="checkbox" name="checkbox" value="value" checked="true">' + typeCount + ' 个有误的类型';
             if (typeCount > 1) {
-                types += 's';
+                types += '';
             }
             filterBlock += types + '</label>';
         }
@@ -919,9 +920,9 @@ var jdd = {
          * The equals checkbox
          */
         if (eqCount > 0) {
-            var eq = '<label><input id="showEq" type="checkbox" name="checkbox" value="value" checked="true">' + eqCount + ' unequal value';
+            var eq = '<label><input id="showEq" type="checkbox" name="checkbox" value="value" checked="true">' + eqCount + ' 个不相等的值';
             if (eqCount > 1) {
-                eq += 's';
+                eq += '';
             }
             filterBlock += eq + '</label>';
         }
