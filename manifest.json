@@ -1,7 +1,7 @@
 {
   "name": "JSON Diff",
   "version": "0.4",
-  "description": "离线运行的JSON Diff扩展",
+  "description": "离线运行的JSON Diff扩展。个人制作，见github.com/chairsssssss/json-diff-zh_cn",
   "manifest_version": 3,
   "permissions": ["tabs"],
   "icons": {
@@ -12,6 +12,6 @@
     "type": "module"
   },
   "action": {
-    "default_title": "JSON Diff offline"
+    "default_title": "离线JSON Diff"
   }
 }
