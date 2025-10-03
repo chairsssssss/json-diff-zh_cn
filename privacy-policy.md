@@ -1,25 +1,25 @@
-# Privacy Policy for JSON Diff Chrome Extension
+# JSON Diff Chrome 扩展程序的隐私政策
+由chairsssssss汉化
+### 最后更新：2023年12月9日
 
-### Last updated: December 9, 2023
+本隐私政策描述了 JSON Diff 如何通过我们的 Google Chrome 扩展程序 JSON Diff 收集、使用和共享您的信息。请在使用扩展程序前仔细阅读本隐私政策。
 
-This Privacy Policy describes how JSON Diff collects, uses, and shares information about you through our Google Chrome extension JSON Diff. Please read this Privacy Policy carefully before using the Extension.
+## 我们收集的信息
 
-## Information We Collect
+由于该扩展程序离线工作，因此不会收集任何信息。
 
-The Extension does not collect any information as it works offline.
+## 信息用途
 
-## Use of Information
+无
 
-NA
+## 安全
 
-## Security
+无
 
-NA
+## 本隐私政策的变更
 
-## Changes to this Privacy Policy
+我们可能会不时更新本隐私政策，任何更改将于本页面发布修订版政策后立即生效。我们建议您定期查看本隐私政策，以了解任何更新内容。
 
-We may update this Privacy Policy from time to time, and any changes will be effective upon posting the revised policy on this page. We encourage you to review this Privacy Policy regularly for any updates.
+## 联系我们
 
-## Contact Us
-
-If you have any questions or concerns about this Privacy Policy or the Extension, please contact me at gangadhar014@gmail.com
+如果您对本隐私政策或扩展程序有任何疑问或顾虑，请通过 gangadhar014@gmail.com 与我联系。
