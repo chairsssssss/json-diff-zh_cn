@@ -5,27 +5,26 @@
 
 离线的浏览器扩展，基于[https://jsondiff.com/](https://jsondiff.com/)制作。
 
-## Motivation
+## 动机
 
-I regularly use [https://jsondiff.com/](https://jsondiff.com/) for comparing JSON documents however it is a website and I have to have internet connectivity always to use it.
+我经常使用 [https://jsondiff.com/](https://jsondiff.com/) 来比较JSON文档。然而它是一个网站，所以在使用它时，我不得不保持联网。
 
-So I decided to build a web extension which works offline and easily accessible on a button click.
+所以我决定制作一个离线的网页扩展，并让它在使用时更为方便。
 
-## Advantages of extension
+## 使用离线扩展的优点
 
-1. Since this is a offline extension, you download once and run on your laptop whether you are connected to internet or not.
-2. Sometimes, the JSON documents we compare may include sensitive information, and it's very important to review the privacy policies and data handling practices of any website before uploading them. However, with the offline extension `JSON Diff`, you can use it without concerns about privacy policies and data handling, as it operates offline.
+1. 这是一个离线的扩展。仅需一次下载，就可让你随时随地地使用。
+2. 有时，我们比较的JSON文件中可能包含一些敏感信息。在上传它们前，有必要提前查看网站的隐私政策和数据处理方法。然而，当你本地运行 `JSON Diff` 时，你就不必担心网站的隐私政策和数据处理方法了。
+> **你的数据存储于浏览器中，永不离开你的系统**.
 
-> **Your data stays in your browser and never leaves your system**.
+## 下载
 
-## Download
+在你自己的浏览器中访问下面的网址：
 
-To download the extension, visit below links on your respective browsers
+谷歌浏览器: https://chrome.google.com/webstore/detail/json-diff/dmndidoancoefdoobhbmjgignfimpmpj
 
-Google Chrome: https://chrome.google.com/webstore/detail/json-diff/dmndidoancoefdoobhbmjgignfimpmpj
+火狐浏览器: https://addons.mozilla.org/en-US/firefox/addon/json-diff/
 
-Mozilla Firefox: https://addons.mozilla.org/en-US/firefox/addon/json-diff/
-
-Below is the extension screenshot
+下面是扩展的预览图：
 
 ![jsondiff extension](extension.jpg)
