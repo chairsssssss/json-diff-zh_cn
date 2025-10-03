@@ -14,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
+ * chinese translated version 
  ******************************************************************************/
 'use strict';
 
@@ -86,7 +87,7 @@ var jdd = {
                     if (!data1.hasOwnProperty(key)) {
                         jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1),
                             config2, jdd.generatePath(config2, jdd.SEPARATOR + key),
-                            'The right side of this object has more items than the left side', jdd.MISSING));
+                            '右页面的此对象比左页面多了', jdd.MISSING));
                     }
                 }
             }
@@ -109,7 +110,7 @@ var jdd = {
                      */
                     jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1),
                         config2, jdd.generatePath(config2),
-                        'Missing property <code>' + key + '</code> from the object on the right side', jdd.MISSING));
+                        '右页该对象缺失属性 <code>' + key + '</code>', jdd.MISSING));
                 } else {
                     config2.currentPath.push(key.replace(jdd.SEPARATOR, '#'));
 
@@ -135,7 +136,7 @@ var jdd = {
                 if (!data1.hasOwnProperty(key)) {
                     jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1),
                         config2, jdd.generatePath(config2, key),
-                        'Missing property <code>' + key + '</code> from the object on the left side', jdd.MISSING));
+                        '左页该对象缺失属性 <code>' + key + '</code>', jdd.MISSING));
                 }
             }
         }
@@ -153,7 +154,7 @@ var jdd = {
             if (['array', 'string', 'number', 'boolean', 'null'].indexOf(getType(val2)) > -1) {
                 jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1),
                     config2, jdd.generatePath(config2),
-                    'Both types should be objects', jdd.TYPE));
+                    '两边都应是 objects（对象） 类型', jdd.TYPE));
             } else {
                 jdd.findDiffs(config1, val1, config2, val2);
             }
@@ -161,28 +162,28 @@ var jdd = {
             if (getType(val2) !== 'string') {
                 jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1),
                     config2, jdd.generatePath(config2),
-                    'Both types should be strings', jdd.TYPE));
+                    '两边都应是 strings（字符串） 类型', jdd.TYPE));
             } else if (val1 !== val2) {
                 jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1),
                     config2, jdd.generatePath(config2),
-                    'Both sides should be equal strings', jdd.EQUALITY));
+                    '两边都应是相等的 string（字符串）', jdd.EQUALITY));
             }
         } else if (getType(val1) === 'number') {
             if (getType(val2) !== 'number') {
                 jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1),
                     config2, jdd.generatePath(config2),
-                    'Both types should be numbers', jdd.TYPE));
+                    '两边都应是 numbers （数值）类型', jdd.TYPE));
             } else if (val1 !== val2) {
                 jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1),
                     config2, jdd.generatePath(config2),
-                    'Both sides should be equal numbers', jdd.EQUALITY));
+                    '两边都应是相等的 数值', jdd.EQUALITY));
             }
         } else if (getType(val1) === 'boolean') {
             jdd.diffBool(val1, config1, val2, config2);
         } else if (getType(val1) === 'null' && getType(val2) !== 'null') {
             jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1),
                 config2, jdd.generatePath(config2),
-                'Both types should be nulls', jdd.TYPE));
+                '两边都应是 nulls', jdd.TYPE));
         }
     },
 
@@ -194,7 +195,7 @@ var jdd = {
         if (getType(val2) !== 'array') {
             jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1),
                 config2, jdd.generatePath(config2),
-                'Both types should be arrays', jdd.TYPE));
+                '两边都应是 arrays（数组） 类型', jdd.TYPE));
             return;
         }
 
@@ -206,14 +207,14 @@ var jdd = {
             for (var i = val1.length; i < val2.length; i++) {
                 jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1),
                     config2, jdd.generatePath(config2, '[' + i + ']'),
-                    'Missing element <code>' + i + '</code> from the array on the left side', jdd.MISSING));
+                    '左页该数组缺失 <code>' + i + '</code>个元素', jdd.MISSING));
             }
         }
         val1.forEach(function (arrayVal, index) {
             if (val2.length <= index) {
                 jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1, '[' + index + ']'),
                     config2, jdd.generatePath(config2),
-                    'Missing element <code>' + index + '</code> from the array on the right side', jdd.MISSING));
+                    '右页该数组缺失元素 <code>' + index + '</code> ', jdd.MISSING));
             } else {
                 config1.currentPath.push(jdd.SEPARATOR + '[' + index + ']');
                 config2.currentPath.push(jdd.SEPARATOR + '[' + index + ']');
@@ -237,16 +238,16 @@ var jdd = {
         if (getType(val2) !== 'boolean') {
             jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1),
                 config2, jdd.generatePath(config2),
-                'Both types should be booleans', jdd.TYPE));
+                '两边都应是 booleans（布尔） 类型', jdd.TYPE));
         } else if (val1 !== val2) {
             if (val1) {
                 jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1),
                     config2, jdd.generatePath(config2),
-                    'The left side is <code>true</code> and the right side is <code>false</code>', jdd.EQUALITY));
+                    '左页为 <code>true</code> 而右页为 <code>false</code>', jdd.EQUALITY));
             } else {
                 jdd.diffs.push(jdd.generateDiff(config1, jdd.generatePath(config1),
                     config2, jdd.generatePath(config2),
-                    'The left side is <code>false</code> and the right side is <code>true</code>', jdd.EQUALITY));
+                    '左页为 <code>false</code> 而右页为 <code>true</code>', jdd.EQUALITY));
             }
         }
     },
@@ -526,11 +527,11 @@ var jdd = {
         });
 
         if (!pathObj1) {
-            throw 'Unable to find line number for (' + msg + '): ' + path1;
+            throw '无法找到行数 (' + msg + '): ' + path1;
         }
 
         if (!pathObj2) {
-            throw 'Unable to find line number for (' + msg + '): ' + path2;
+            throw '无法找到行数 (' + msg + '): ' + path2;
         }
 
         return {
