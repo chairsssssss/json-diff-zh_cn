@@ -1,6 +1,9 @@
+这是 JSON-Diff 的离线浏览器扩展的个人汉化页面，未经作者授权。
+以下是原项目的自述文件（已汉化）
+
 # JSON Diff
 
-Offline browser extension for [https://jsondiff.com/](https://jsondiff.com/)
+离线的浏览器扩展，基于[https://jsondiff.com/](https://jsondiff.com/)制作。
 
 ## Motivation
 
