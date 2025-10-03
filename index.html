@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="Validate, format, and compare two JSON documents.  See the differences between the objects instead of just the new lines and mixed up properties.">
+        <title>JSON Diff - JSON文件比较工具</title>
+
+        <link rel="stylesheet" href="reset.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="throbber.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="jdd.css" type="text/css" media="screen">
+
+        <script src="jsl/jsl.format.js" type="text/javascript" charset="utf-8"></script>
+        <script src="jsl/jsl.parser.js" type="text/javascript" charset="utf-8"></script>
+        <script src="jdd.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <div id="main">
+            <div class="header">
+                <h1>JSON Diff</h1>
+                <h3>JSON文件比较工具</h3>
+
+                <div class="weak">
+                    <p>
+                        检验、格式化以及比较两份JSON文档。查看对象（object）之间的差异而不仅仅是新增的行数和混淆不清的属性（properties）。
+                    </p>
+
+                    <p>
+                        由 <a href="http://www.zackgrossbart.com">Zack Grossbart</a>制作。获取源码：<a href="https://github.com/zgrossbart/jdd">source code</a>
+                    </p>
+
+                    <p>
+                        由衷感谢工具背后的团队：<a href="http://www.jsonlint.com">JSONLint</a>
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="initContainer">
+                <div class="left">
+                    <textarea spellcheck="false" id="textarealeft" placeholder="Enter JSON to compare, enter an URL to JSON" tabindex="1"></textarea>
+                    <pre id="errorLeft" class="error"></pre>
+                    <span class="fileInput">or <input type="file" id="fileLeft" tabindex="4"></span>
+                </div>
+
+                <div class="center">
+                    <button id="compare" tabindex="3">开始对比</button>
+                    <div class="throbber-loader"></div>
+                    <br/><br/>
+                    或看看<br /><a href="#" id="sample">对比示例</a>
+                </div>
+
+                <div class="right">
+                    <textarea spellcheck="false" class="right" id="textarearight" placeholder="Enter JSON to compare, enter an URL to JSON" tabindex="2"></textarea>
+                    <pre id="errorRight" class="error"></pre>
+                    <span class="fileInput">or <input type="file" id="fileRight" tabindex="5"></span>
+                </div>
+            </div>
+
+            <div class="diffcontainer">
+                <div id="report">
+                </div>
+                <pre id="out" class="left" class="codeBlock"></pre>
+                <pre id="out2" class="right" class="codeBlock"></pre>
+                <ul id="toolbar" class="toolbar"></ul>
+            </div>
+        </div>
+    </body>
+</html>
