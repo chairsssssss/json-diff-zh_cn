@@ -1,7 +1,7 @@
 这是 JSON-Diff 的离线浏览器扩展的个人汉化页面，未经作者授权。  
 To the original author,if it infringeed your copyright or sth else,please contact me,and I will deal with it as quick as I can.  
 
-直接下载源码，解压后在浏览器扩展页面直接导入。
+直接下载ZIP，解压后在浏览器扩展页面直接导入。
 以下是原项目的自述文件（已汉化）：
 
 # JSON Diff
